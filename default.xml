@@ -419,7 +419,7 @@
   <project name="hardware_rk29_mobicore" path="hardware/rk29/mobicore" remote="nu3001" />
   <project name="hardware_rk29_power" path="hardware/rk29/power" remote="nu3001" />
   <project name="hardware_rk29_sensor" path="hardware/rk29/sensor" remote="nu3001" />
-  <project name="kernel" path="kernel" remote="nu3001" />
+  <project name="kernel_rk3188" path="kernel" remote="nu3001" />
   <project groups="pdk" name="external_bluetooth_bplus_bluedroid" path="external/bluetooth_bplus/bluedroid" remote="nu3001" />
   <project groups="pdk" name="external_broadcom_bplus" path="external/broadcom_bplus" remote="nu3001"/>
   <project name="external_ffmpeg" path="external/ffmpeg" remote="nu3001"/>
