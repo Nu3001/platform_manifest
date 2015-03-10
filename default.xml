@@ -49,7 +49,7 @@
   <project name="external_chromium" path="external/chromium" remote="nu3001" />
   <project name="platform/external/chromium-libpac" path="external/chromium-libpac" />
   <project groups="pdk" name="platform/external/chromium-trace" path="external/chromium-trace" />
-  <project name="plaftorm/external/chromium_org" path="external/chromium_org" />
+  <project name="platform/external/chromium_org" path="external/chromium_org" />
   <project name="platform/external/chromium_org/sdch/open-vcdiff" path="external/chromium_org/sdch/open-vcdiff" />
   <project name="platform/external/chromium_org/testing/gtest" path="external/chromium_org/testing/gtest" />
   <project name="platform/external/chromium_org/third_party/WebKit" path="external/chromium_org/third_party/WebKit" />
