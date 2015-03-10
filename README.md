@@ -59,4 +59,4 @@ You can also build (and see how long it took) for specific devices like this:
 Remember to `make clobber` every now and then!
 
 ** Create RK update.img **
-{WIP}
+./mkimage.sh ota
