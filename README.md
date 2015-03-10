@@ -46,12 +46,17 @@ You may now procede to building android
 After the sync is finished, please read the [instructions from the Android site](http://s.android.com/source/building.html) on how to build.
 
     . build/envsetup.sh
-    brunch
+     lunch rk3188-eng
+     make all
 
 
 You can also build (and see how long it took) for specific devices like this:
 
     . build/envsetup.sh
-    time brunch rk3188
+    lunch rk3188-eng
+    time make all
 
 Remember to `make clobber` every now and then!
+
+** Create RK update.img **
+{WIP}
