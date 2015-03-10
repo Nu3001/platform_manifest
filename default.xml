@@ -178,7 +178,7 @@
   <project name="platform/external/oprofile" path="external/oprofile"  />
   <project name="platform/external/pixman" path="external/pixman"  />
   <project name="external_ppp" path="external/ppp" remote="nu3001" />
-  <project groups="pdk-java" name="platform/external/proguard" />
+  <project groups="pdk-java" name="platform/external/proguard" path="external/proguard" />
   <project groups="pdk" name="platform/external/protobuf" path="external/protobuf" />
   <project name="platform/external/qemu" path="external/qemu"  />
   <project name="platform/external/qemu-pc-bios" path="external/qemu-pc-bios" />
