@@ -6,6 +6,10 @@
   <remote  name="nu3001"
            fetch="https://github.com/Nu3001" 
            revision="master" />
+  
+  <remote  name="koush"
+           fetch="https://github.com/koush" 
+           revision="master" />
 
 
   <default remote="aosp" revision="refs/tags/android-4.4.2_r1" sync-c="true" sync-j="16"/>
@@ -191,6 +195,8 @@
   <project name="platform/external/sfntly" path="external/sfntly" />
   <project name="platform/external/sil-fonts" path="external/sil-fonts" />
   <project name="external_skia" path="external/skia" remote="nu3001" />
+  <project name="Superuser" path="external/koush/Superuser" remote="koush" />
+  <project name="Widgets" path="external/koush/Widgets" remote="koush" />
   <project name="platform/external/smack" path="external/smack" />
   <project name="platform/external/smali" path="external/smali" />
   <project groups="pdk" name="platform/external/sonivox" path="external/sonivox" />
