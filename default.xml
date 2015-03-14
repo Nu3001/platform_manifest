@@ -10,7 +10,7 @@
 
   <default remote="aosp" revision="refs/tags/android-4.4.2_r1" sync-c="true" sync-j="16"/>
   
-  <project name="device_common" remote="nu3001" />
+  <project name="device_common" path="device/common" remote="nu3001" />
   <project groups="pdk" name="platform/abi/cpp" path="abi/cpp" />
   <project name="art" path="art" remote="nu3001" />
   <project groups="pdk" name="bionic" path="bionic" remote="nu3001" />
@@ -399,6 +399,7 @@
   <project groups="tools" name="platform/tools/external/gradle" path="tools/external/gradle" />
   <project name="rkdocs" path="RKDocs" remote="nu3001" />
   <project name="rktools" path="RKTools" remote="nu3001" />
+  <project name="rockdev" path="rockdev" remote="nu3001" />
   <project name="device_rockchip_common" path="device/rockchip/common" remote="nu3001" />
   <project name="device_rockchip_rk3188" path="device/rockchip/rk3188" remote="nu3001"/>
   <project name="device_rockchip_rksdk" path="device/rockchip/rksdk" remote="nu3001" >
