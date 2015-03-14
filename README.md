@@ -60,3 +60,7 @@ Remember to `make clobber` every now and then!
 
 ** Create RK update.img **
 ./mkimage.sh ota
+cd rockdev
+./mkupdate.sh
+
+update.img should now be in /rockdev
