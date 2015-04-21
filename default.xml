@@ -6,6 +6,8 @@
   <remote  name="nu3001"
            fetch="https://github.com/Nu3001" 
            revision="master" />
+  <remote  name="busybox"
+           fetch="https://github.com/AOKP"/>
 
 
   <default remote="aosp" revision="refs/tags/android-4.4.2_r1" sync-c="true" sync-j="16"/>
@@ -436,4 +438,5 @@
   <project name="packages_apps_bonovoapps" path="packages/apps/BonovoApps" remote="nu3001" />
   <project name="rkst" path="rkst" remote="nu3001" />
   <project name="vendor" path="vendor" remote="nu3001" />
+  <project name="external_busybox" path="external/busybox" remote="busybox" revision="kitkat" />
 </manifest>
