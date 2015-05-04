@@ -18,7 +18,7 @@
   <project groups="pdk" name="bionic" path="bionic" remote="nu3001" />
   <project name="platform/bootable/bootloader/legacy" path="bootable/bootloader/legacy" />
   <project name="platform/bootable/diskinstaller" path="bootable/diskinstaller" />
-  <project groups="pdk" name="Team-Win-Recovery-Project" path="bootable/recovery" remote="nu3001" />
+  <project groups="pdk" name="Team-Win-Recovery-Project" path="bootable/recovery" remote="nu3001" revision="android-5.0" />
   <project groups="pdk" name="build" path="build" remote="nu3001" >
     <copyfile dest="Makefile" src="core/root.mk"/>
   </project>
