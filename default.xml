@@ -6,8 +6,12 @@
   <remote  name="nu3001"
            fetch="https://github.com/Nu3001" 
            revision="master" />
-  <remote  name="busybox"
+
+  <remote  name="aokp"
            fetch="https://github.com/AOKP"/>
+
+ <remote   name="cm"
+	   fetch="https://github.com/CyanogenMod" />
 
 
   <default remote="aosp" revision="refs/tags/android-4.4.2_r1" sync-c="true" sync-j="16"/>
@@ -276,6 +280,7 @@
   <project name="libcore" path="libcore" remote="nu3001" />
   <project groups="pdk-java" name="libnativehelper" path="libnativehelper" remote="nu3001" />
   <project name="platform/ndk" path="ndk"  />
+  <project name="android_packages_apps_Apollo" path="packages/apps/Apollo" remote="cm" revision="cm-11.0" />
   <project name="platform/packages/apps/BasicSmsReceiver" path="packages/apps/BasicSmsReceiver" />
   <project name="packages_apps_bluetooth" path="packages/apps/Bluetooth" remote="nu3001" />
   <project name="packages_apps_browser" path="packages/apps/Browser" remote="nu3001" />
@@ -438,5 +443,5 @@
   <project name="packages_apps_bonovoapps" path="packages/apps/BonovoApps" remote="nu3001" />
   <project name="rkst" path="rkst" remote="nu3001" />
   <project name="vendor" path="vendor" remote="nu3001" />
-  <project name="external_busybox" path="external/busybox" remote="busybox" revision="kitkat" />
+  <project name="external_busybox" path="external/busybox" remote="aokp" revision="kitkat" />
 </manifest>
