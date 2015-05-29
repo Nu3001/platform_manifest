@@ -397,7 +397,7 @@
   <project groups="pdk,tools" name="platform/prebuilts/tools" path="prebuilts/tools"  />
   <project name="platform/sdk" path="sdk"  />
   <project groups="pdk" name="system_core" path="system/core" remote="nu3001" />
-  <project groups="pdk" name="platform/system/extras" path="system/extras" />
+  <project groups="pdk" name="platform_system_extras" path="system/extras" remote="nu3001" />
   <project groups="pdk" name="system_media" path="system/media" remote="nu3001" />
   <project groups="pdk" name="system_netd" path="system/netd" remote="nu3001" />
   <project groups="pdk" name="system_security" path="system/security" remote="nu3001" />
