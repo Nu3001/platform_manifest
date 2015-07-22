@@ -444,4 +444,5 @@
   <project name="rkst" path="rkst" remote="nu3001" />
   <project name="vendor" path="vendor" remote="nu3001" />
   <project name="external_busybox" path="external/busybox" remote="aokp" revision="kitkat" />
+  <project name="external_usb_modeswitch" path="external/usb_modeswitch" remote="nu3001" />
 </manifest>
