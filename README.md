@@ -1,66 +1,82 @@
-This is the android source code for a Rockchip 3188 based automotive head unit
-(Newsmy 3001/5002). 
+This is the Android 4.4 (KitKat) source code for the Newsmy Rockchip 3188 based automotive head units.
+(Newsmy NR and NU series, also known as Carpad 2 and Carpad 3)
 
 
 Download the Source
 ===================
 
-Please read the [AOSP building instructions](http://source.android.com/source/index.html) before proceeding.
+Please read the [AOSP building instructions](http://source.android.com/source/index.html) before proceeding. 
+The process below is fairly straightforward but a basic knowledge of how Android is built will make life a lot easier for you.
 
-Initializing Repository
------------------------
+Initializing your repository (repo)
+-----------------------------------
 
-Init core trees 
+1. Create a folder on your computer where you will store the repo.
+    You will run the following commands from within that folder unless otherwise specified.
+
+2. Create an empty repo which points to this github tree:
 
     $ repo init -u https://github.com/Nu3001/platform_manifest.git -b master
 
-
-sync repo :
+3. Download a copy of the repo to your computer:
 
     $ repo sync
+    
+Depending on your internet connection speed, this step will take several hours and will download a very large amount of data.
 
 ***
 
-Building
---------
-*** Make Kernel before building Android ***
+Building the Kernel
+-------------------
 
-cd /kernel
+The Linux kernel must be built before the remainder of the Android source.  Use the following commands to build a suitable kernel.
 
-export ARCH=arm
+    $ cd /kernel
 
-export CROSS_COMPILE=../prebuilts/gcc/linux-x86/arm/arm-eabi-4.6/bin/arm-eabi-
+    $ export ARCH=arm
 
-export UTS_RELEASE="3.0.36+"
+    $ export CROSS_COMPILE=../prebuilts/gcc/linux-x86/arm/arm-eabi-4.6/bin/arm-eabi-
 
-make amplified_defconfig
+    $ export UTS_RELEASE="3.0.36+"
 
-make kernel.img
+    $ make amplified_defconfig
 
-make modules
+    $ make kernel.img
 
-sudo make modules_install
+    $ make modules
 
-You may now procede to building android
+Building Android
+----------------
 
-After the sync is finished, please read the [instructions from the Android site](http://s.android.com/source/building.html) on how to build.
+After building the Kernel, its time to build the complete Android build environment and source tree. 
 
-    . build/envsetup.sh
-     lunch rk3188-eng
-     make all
+Please read the [instructions from the Android site](http://s.android.com/source/building.html) for more detail on how to build.
 
+The basic commands are:
 
-You can also build (and see how long it took) for specific devices like this:
+    $ . build/envsetup.sh
+    $ lunch rk3188-eng
+    $ make all
 
-    . build/envsetup.sh
-    lunch rk3188-eng
-    time make all
+Building Android
+----------------
 
-Remember to `make clobber` every now and then!
+    $ ./mkimage.sh ota
+    $ cd rockdev
+    $ ./mkupdate.sh
 
-** Create RK update.img **
-./mkimage.sh ota
-cd rockdev
-./mkupdate.sh
+Once this is completed the update.img file should now be in the /rockdev folder.  You may flash this to the device using RKBatchTool.
 
-update.img should now be in /rockdev
+If you wish to build an update ZIP file which can be applied using TWRP then use the following command instead of the above.
+
+    $ make otapackage
+    
+This will save an update ZIP file in the /out/target/product/rk3188/ folder.
+
+Developer node
+--------------
+
+Remember to `make clobber` every now and then if you are mkaing changes to the source.  
+This will delete the /out folder and cause a complete rebuild of the source from scratch. 
+
+If you need help or can offer help, check out the xdAuto thread on xda-developers at http://forum.xda-developers.com/android-auto/android-head-units/xdauto-rom-newsmy-carpad-t3266694
