@@ -58,8 +58,8 @@ The basic commands are:
     $ lunch rk3188-eng
     $ make all
 
-Building Android
-----------------
+Building a flashable image
+--------------------------
 
     $ ./mkimage.sh ota
     $ cd rockdev
